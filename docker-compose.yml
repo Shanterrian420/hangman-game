@@ -1,0 +1,6 @@
+
+services:
+  hangman:
+    build: .
+    ports:
+      - "3000:5173"
