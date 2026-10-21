@@ -1,16 +1,59 @@
-# React + Vite
+# React + Vite + Docker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Hangman Game
 
-Currently, two official plugins are available:
+## Overview
+A Hangman game built with React and Vite. The game allows players to guess letters to reveal a hidden word before running out of lives. It can also be run using Docker.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- Random word selection
+- Letter guessing
+- Displays guessed letters
+- Tracks remaining lives
+- Displays win and loss messages
+- New Game button
+- Hangman drawing that changes as lives are lost
+- Docker support
 
-## React Compiler
+## Technologies
+- React
+- JavaScript
+- Vite
+- CSS
+- Docker
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How to Play
+1. Start a new game.
+2. Select letters to guess the hidden word.
+3. Correct guesses reveal letters in the word.
+4. Incorrect guesses reduce your remaining lives.
+5. Reveal the entire word to win, or run out of lives and lose.
+6. Select **New Game** to play again.
 
-## Expanding the ESLint configuration
+## Run Locally
+Install the dependencies:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Run with Docker
+Build and start the container:
+
+```bash
+docker compose up --build
+```
+
+Open the game at [http://localhost:3000](http://localhost:3000).
+
+To stop the container, press `Ctrl + C` in the terminal, or run:
+
+```bash
+docker compose down
+```
